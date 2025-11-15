@@ -14,29 +14,27 @@
 
 
 <record id="view_partner_contractor_form" model="ir.ui.view">
-<field name="name">partner.contractor.form</field>
-<field name="model">partner.contractor</field>
-<field name="arch" type="xml">
-<form>
-<sheet>
-<group>
-<field name="name"/>
-<field name="partner_id"/>
-<field name="details"/>
-</group>
-<notebook>
-<page string="Sites">
-<field name="site_ids">
-<tree editable="bottom">
-<field name="name"/>
-<field name="details"/>
-</tree>
-</field>
-</page>
-</notebook>
-</sheet>
-</form>
-</field>
+    <field name="name">partner.contractor.form</field>
+    <field name="model">partner.contractor</field>
+    <field name="arch" type="xml">
+        <form string="Contractor">
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                </group>
+                <notebook>
+                    <page string="Sites">
+                        <field name="site_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+    </field>
 </record>
 
 
@@ -52,5 +50,5 @@
     name="Contractors"
     parent="sale.sale_menu_root"
     action="action_partner_contractor"/>
-    
+
 </odoo>

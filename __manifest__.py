@@ -1,13 +1,14 @@
 {
-    'name': 'Sale Contractor & Site',
-    'version': '16.0.1.0',
-    'summary': 'Adds Contractor and Site fields to Sale Order',
-    'description': 'Adds contractor and site fields linked to res.partner, with site filtered by contractor.',
+    'name': 'Sale Partner Contractors',
+    'version': '16.0.1.0.0',
+    'summary': 'Manage contractors & sites under Contacts and add contractor/site to Sale Orders',
+    'description': 'Contractors are child contacts flagged as contractors; sites are child contacts of contractors. Adds contractor/site on sale.order with domain filtering.',
     'author': 'Aspire Analytica',
-    'depends': ['sale'],
+    'license': 'LGPL-3',
+    'category': 'Sales',
+    'depends': ['base', 'sale'],    
     'data': [
-        'views/sale_order_view.xml',
+        'views/contractor_site_views.xml',
     ],
     'installable': True,
-    'application': False,
 }

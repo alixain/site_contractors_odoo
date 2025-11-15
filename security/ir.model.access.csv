@@ -1,4 +1,3 @@
-model_id,name,perm_read,perm_write,perm_create,perm_unlink,group_id
-access_partner_contractor,access_partner_contractor,model_partner_contractor,1,1,1,1,
-access_partner_contractor_site,access_partner_contractor_site,model_partner_contractor_site,1,1,1,1,
-partner_contractor_site_access,access_partner_contractor_site,1,1,1,1,
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partner_contractor,access_partner_contractor,model_partner_contractor,,1,1,1,1
+access_partner_contractor_site,access_partner_contractor_site,model_partner_contractor_site,,1,1,1,1

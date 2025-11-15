@@ -47,6 +47,10 @@
 <field name="view_mode">tree,form</field>
 </record>
 
-
-<menuitem id="menu_partner_contractors" name="Contractors" parent="base.menu_sales" action="action_partner_contractor"/>
+<menuitem 
+    id="menu_partner_contractors" 
+    name="Contractors"
+    parent="sale.sale_menu_root"
+    action="action_partner_contractor"/>
+    
 </odoo>

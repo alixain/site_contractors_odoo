@@ -21,7 +21,7 @@
 <group>
 <field name="name"/>
 <field name="contractor_id"/>
-<field name="details"/>
+<field name="details" widget="text"/>
 </group>
 </sheet>
 </form>

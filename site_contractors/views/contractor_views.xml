@@ -48,7 +48,7 @@
 <menuitem 
     id="menu_partner_contractors" 
     name="Contractors"
-    parent="sale.sale_menu_root"
+    parent="contacts.menu_contacts"
     action="action_partner_contractor"/>
 
 </odoo>

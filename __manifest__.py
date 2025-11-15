@@ -4,11 +4,14 @@
     'summary': 'Manage contractors & sites under Contacts and add contractor/site to Sale Orders',
     'description': 'Contractors are child contacts flagged as contractors; sites are child contacts of contractors. Adds contractor/site on sale.order with domain filtering.',
     'author': 'Aspire Analytica',
-    'license': 'LGPL-3',
-    'category': 'Sales',
-    'depends': ['base', 'sale'],    
+    'depends': ['base', 'sale'],
     'data': [
-        'views/contractor_site_views.xml',
+        'security/ir.model.access.csv',
+        'views/partner_views.xml',
+        'views/contractor_views.xml',
+        'views/site_views.xml',
+        'views/sale_order_views.xml',
     ],
     'installable': True,
+    'application': False,
 }

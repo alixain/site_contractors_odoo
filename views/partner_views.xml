@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_partner_form_inherit_contractors" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.contractors</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Add Contractors page after Sales/Purchases page -->
+            <xpath expr="//page[@name='sales_purchases']" position="after">
+                <page string="Contractors &amp; Sites" name="contractors_sites">
+                    <group>
+                        <field name="contractor_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="details"/>
+                                <field name="site_count"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

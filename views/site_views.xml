@@ -1,0 +1,30 @@
+<odoo>
+<!-- Site tree/form views -->
+<record id="view_partner_contractor_site_tree" model="ir.ui.view">
+<field name="name">partner.contractor.site.tree</field>
+<field name="model">partner.contractor.site</field>
+<field name="arch" type="xml">
+<tree>
+<field name="name"/>
+<field name="contractor_id"/>
+</tree>
+</field>
+</record>
+
+
+<record id="view_partner_contractor_site_form" model="ir.ui.view">
+<field name="name">partner.contractor.site.form</field>
+<field name="model">partner.contractor.site</field>
+<field name="arch" type="xml">
+<form>
+<sheet>
+<group>
+<field name="name"/>
+<field name="contractor_id"/>
+<field name="details"/>
+</group>
+</sheet>
+</form>
+</field>
+</record>
+</odoo>

@@ -1,0 +1,52 @@
+<odoo>
+<!-- Contractor form/tree views -->
+<record id="view_partner_contractor_tree" model="ir.ui.view">
+<field name="name">partner.contractor.tree</field>
+<field name="model">partner.contractor</field>
+<field name="arch" type="xml">
+<tree>
+<field name="name"/>
+<field name="partner_id"/>
+<field name="site_count"/>
+</tree>
+</field>
+</record>
+
+
+<record id="view_partner_contractor_form" model="ir.ui.view">
+<field name="name">partner.contractor.form</field>
+<field name="model">partner.contractor</field>
+<field name="arch" type="xml">
+<form>
+<sheet>
+<group>
+<field name="name"/>
+<field name="partner_id"/>
+<field name="details"/>
+</group>
+<notebook>
+<page string="Sites">
+<field name="site_ids">
+<tree editable="bottom">
+<field name="name"/>
+<field name="details"/>
+</tree>
+</field>
+</page>
+</notebook>
+</sheet>
+</form>
+</field>
+</record>
+
+
+<!-- Menu entries (under Contacts) -->
+<record id="action_partner_contractor" model="ir.actions.act_window">
+<field name="name">Contractors</field>
+<field name="res_model">partner.contractor</field>
+<field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem id="menu_partner_contractors" name="Contractors" parent="base.menu_sales" action="action_partner_contractor"/>
+</odoo>

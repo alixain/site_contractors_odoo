@@ -1,10 +1,24 @@
 <odoo>
+    <!-- Form view: add Contractor & Site after Customer -->
     <record id="sale_order_form_inherit_contractor_site" model="ir.ui.view">
         <field name="name">sale.order.form.inherit.contractor.site</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="contractor_id"/>
+                <field name="site_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Tree/list view: show Contractor & Site as columns -->
+    <record id="sale_order_tree_inherit_contractor_site" model="ir.ui.view">
+        <field name="name">sale.order.tree.inherit.contractor.site</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
                 <field name="contractor_id"/>
                 <field name="site_id"/>
             </xpath>

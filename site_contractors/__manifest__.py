@@ -1,6 +1,6 @@
 {
     'name': 'Sale Partner Contractors',
-    'version': '19.0.1.0.0',
+    'version': '18.0.1.0.0',
     'summary': 'Manage contractors & sites under Contacts and add contractor/site to Sale Orders',
     'description_file': 'static/description/description.html',
     'author': 'Aspire Analytica',

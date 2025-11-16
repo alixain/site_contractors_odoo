@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contractors & Sites — Aspire Analytica</title>
+  <style>
+    :root{
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0b66c3;
+      --accent-2:#0f7be6;
+      --radius:12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f3f8ff 0%,var(--bg) 100%);
+      color:#0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{
+      max-width:1100px;
+      margin:28px auto;
+      padding:22px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(11,102,195,0.06);
+      overflow:hidden;
+      border:1px solid rgba(10,20,40,0.04);
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:24px;
+      align-items:center;
+    }
+    .hero .banner{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+    .hero-right{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .icon{
+      width:88px;
+      height:88px;
+      border-radius:14px;
+      background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 8px 18px rgba(11,102,195,0.12);
+      border:1px solid rgba(255,255,255,0.12);
+    }
+    .icon img{ width:56px; height:56px; display:block; }
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:-0.2px;
+    }
+    .subtitle{ color:var(--muted); margin-top:4px; font-size:14px; }
+    .badges{ display:flex; gap:8px; margin-top:8px; flex-wrap:wrap; }
+    .badge{
+      background:rgba(11,102,195,0.08);
+      color:var(--accent);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:12px;
+    }
+
+    .content{
+      padding:22px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:24px;
+    }
+
+    .features{
+      background:linear-gradient(180deg,#ffffff, #fbfdff);
+      border-radius:10px;
+      padding:18px;
+      border:1px solid rgba(10,20,40,0.03);
+    }
+
+    .features ul{ margin:12px 0 0 18px; color:var(--muted); }
+    .features li{ margin:10px 0; }
+
+    .howto{
+      background:#f8fbff;
+      border-radius:10px;
+      padding:16px;
+      font-size:14px;
+      color:var(--muted);
+      border:1px solid rgba(11,102,195,0.03);
+    }
+
+    .cta{
+      display:flex;
+      gap:12px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      background:var(--accent);
+      color:white;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 8px 18px rgba(11,102,195,0.12);
+    }
+    .btn.secondary{
+      background:transparent;
+      color:var(--accent);
+      border:1px solid rgba(11,102,195,0.12);
+      box-shadow:none;
+    }
+
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:14px;
+    }
+
+    footer{
+      margin-top:18px;
+      padding:18px;
+      font-size:13px;
+      color:var(--muted);
+      border-top:1px dashed rgba(10,20,40,0.04);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      background:transparent;
+    }
+
+    /* responsive */
+    @media (max-width:960px){
+      .hero{ grid-template-columns:1fr; }
+      .container{ padding:14px; }
+      .content{ grid-template-columns: 1fr; }
+      .hero-right{ align-items:flex-start; padding:14px; }
+      .hero .banner{ height:170px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <!-- HERO -->
+      <div style="padding:0">
+        <div class="hero">
+          <!-- left: banner -->
+          <img class="banner" src="https://raw.githubusercontent.com/alixain/site_contractors_odoo/18.0/site_contractors/static/description/cover.png" alt="Contractors & Sites Banner" />
+          <!-- right: icon + title -->
+          <div class="hero-right">
+            <div class="icon" aria-hidden="true">
+              <img src="https://raw.githubusercontent.com/alixain/site_contractors_odoo/18.0/site_contractors/static/description/icon.png" alt="Module Icon" />
+            </div>
+
+            <div style="margin-top:6px;">
+              <h1>Contractors & Sites Management</h1>
+              <div class="subtitle">Manage contractors and their sites per Customer — integrated with Sales (Odoo).</div>
+              <div class="badges" aria-hidden="true">
+                <span class="badge">Odoo 18</span>
+                <span class="badge">Sales Integration</span>
+                <span class="badge">No Data Override</span>
+              </div>
+            </div>
+
+            <div class="meta">
+              <strong>Aspire Analytica</strong> · contact@aspireanalytica.com
+            </div>
+
+            <div class="cta">
+              <a class="btn" href="#" onclick="alert('Install via Apps → Upload Module');return false;">Install / Upload</a>
+              <a class="btn secondary" href="#" onclick="alert('README: Follow the install steps.');return false;">Read docs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content">
+        <div>
+          <div class="features">
+            <h3 style="margin:0 0 6px 0;">What it does</h3>
+            <p style="margin:0; color:var(--muted);">
+              This module provides a lightweight, standard approach to manage contractors and sites linked to a customer, and to pick them on Sales Orders.
+            </p>
+            <ul>
+              <li>Contractors are records linked to a Company (res.partner).</li>
+              <li>Each Contractor can have multiple Sites.</li>
+              <li>Sale Orders contain <strong>Contractor</strong> and <strong>Site</strong> fields with dynamic filtering.</li>
+              <li>List & Form views updated — search filters available.</li>
+            </ul>
+
+            <h4 style="margin-top:12px">Why it’s reliable</h4>
+            <ul>
+              <li>Separate models for Contractor & Site — no hack on parent/child contacts.</li>
+              <li>Proper access rights included.</li>
+              <li>Tested on Odoo Community.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:14px" class="howto">
+            <strong>Quick install</strong>
+            <ol style="margin:8px 0 0 18px;">
+              <li>Copy module folder to your addons path: <code>/odoo/custom_addons/site_contractors/</code></li>
+              <li>Restart Odoo and Update Apps list.</li>
+              <li>Install <em>Site Contractors</em> from Apps.</li>
+              <li>Create Contractors under Contacts → Contractors; add Sites under a Contractor; use in Sales → Orders.</li>
+            </ol>
+          </div>
+        </div>
+
+        <aside>
+          <div style="padding:12px; border-radius:10px; background:linear-gradient(180deg,#ffffff,#fbfdff); border:1px solid rgba(11,102,195,0.04)">
+            <h4 style="margin:0 0 8px 0;">Quick links</h4>
+            <p style="margin:0 0 8px 0; color:var(--muted);">Helpful places in Odoo after install:</p>
+            <ul style="margin:0 0 8px 18px; color:var(--muted);">
+              <li>Contacts → Contractors</li>
+              <li>Sales → Orders (Contractor & Site fields)</li>
+              <li>Settings → Users & Companies (access rights)</li>
+            </ul>
+
+            <h4 style="margin-top:8px;">Module details</h4>
+            <p style="margin:6px 0 0 0; color:var(--muted);"><strong>License:</strong> LGPL-3</p>
+            <p style="margin:6px 0 0 0; color:var(--muted);"><strong>Author:</strong> Aspire Analytica</p>
+          </div>
+
+          <div style="margin-top:12px; padding:12px; border-radius:10px; background:white; border:1px solid rgba(10,20,40,0.03)">
+            <h4 style="margin:0 0 8px 0;">Support</h4>
+            <p style="margin:0; color:var(--muted);">Need customization or setup help? Contact:</p>
+            <p style="margin:8px 0 0 0;"><strong>contact@aspireanalytica.com</strong></p>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <div>© Aspire Analytica — Contractors & Sites</div>
+        <div style="color:var(--muted)">Icons & images included • Tested on Odoo CE</div>
+      </footer>
+
+    </div> <!-- card -->
+  </div> <!-- container -->
+</body>
+</html>

@@ -2,7 +2,10 @@
     'name': 'Sale Partner Contractors',
     'version': '18.0.1.0.0',
     'summary': 'Manage contractors & sites under Contacts and add contractor/site to Sale Orders',
-    'description_file': 'static/description/description.html',
+    'description': """
+        This module allows you to manage contractors and their sites per Customer in Odoo.
+        You can assign contractors and their respective sites to Sale Orders without overriding contact data.
+    """,
     'author': 'Aspire Analytica',
     'website': 'https://aspireanalytica.com',
     'depends': ['base', 'sale', 'contacts'],
